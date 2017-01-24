@@ -2,6 +2,7 @@ package net.topikachu.dyna;
 
 import net.topikachu.dyna.entity.Customer;
 import net.topikachu.dyna.repository.CustomerRepository;
+import net.topikachu.dyna.service.Dyna2Pool;
 import net.topikachu.dyna.service.DynaPool;
 import net.topikachu.dyna.service.DynaService;
 import org.slf4j.Logger;
@@ -25,7 +26,7 @@ public class DynajpaApplication {
 	}
 
 	@Bean
-	public CommandLineRunner start(CustomerRepository repository, DynaService dynaService, DynaPool dynaPool){
+	public CommandLineRunner start(CustomerRepository repository, DynaService dynaService, Dyna2Pool dynaPool){
 		return (args)->{
 			// save a couple of customers
 			repository.save(new Customer("Jack", "Bauer"));
@@ -59,8 +60,8 @@ public class DynajpaApplication {
 
 			dynaPool.gen1();
             dynaService.dyna();
-            dynaPool.gen2();
-            dynaService.dyna2();
+//            dynaPool.gen2();
+//            dynaService.dyna2();
 		};
 	}
 

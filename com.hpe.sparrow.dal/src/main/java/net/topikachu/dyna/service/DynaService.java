@@ -21,14 +21,14 @@ public class DynaService {
     private EntityManager entityManager;
     private static final Logger log = LoggerFactory.getLogger(DynaService.class);
     @Autowired
-    private DynaPool dynaPool;
+    private Dyna2Pool dyna2Pool;
     @Transactional
     public void dyna() throws Exception {
         String classname = "net.topikachu.dyna.entity.dyna.Customer";
 
 
         JPADynamicHelper jpaDynamicHelper = new JPADynamicHelper(entityManager);
-        jpaDynamicHelper.addTypes(false, false, dynaPool.getDynamicTypes());
+        jpaDynamicHelper.addTypes(false, false, dyna2Pool.getDynamicTypes());
         DynamicEntity newDynamicEntity = jpaDynamicHelper.newDynamicEntity(classname);
         newDynamicEntity.set("id", 100);
         newDynamicEntity.set("firstName", "firstNameDyna");
@@ -45,7 +45,7 @@ public class DynaService {
 
 
         JPADynamicHelper jpaDynamicHelper = new JPADynamicHelper(entityManager);
-        jpaDynamicHelper.addTypes(false, false, dynaPool.getDynamicTypes());
+        jpaDynamicHelper.addTypes(false, false, dyna2Pool.getDynamicTypes());
         DynamicEntity newDynamicEntity = jpaDynamicHelper.newDynamicEntity(classname);
         DynamicEntity entityCustomer = (DynamicEntity) entityManager.find(jpaDynamicHelper.getType(classname).getJavaClass(), 100);
 
