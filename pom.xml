@@ -15,6 +15,8 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <spring.version>1.4.3.RELEASE</spring.version>
+        <guava.version>21.0</guava.version>
+        <sparrow.version>0.0.1-SNAPSHOT</sparrow.version>
     </properties>
 
     <dependencyManagement>
@@ -32,7 +34,34 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hpe.sparrow</groupId>
+                <artifactId>dal</artifactId>
+                <version>${sparrow.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hpe.sparrow</groupId>
+                <artifactId>metadata</artifactId>
+                <version>${sparrow.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hpe.sparrow</groupId>
+                <artifactId>dynaform</artifactId>
+                <version>${sparrow.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hpe.sparrow</groupId>
+                <artifactId>ootb</artifactId>
+                <version>${sparrow.version}</version>
+            </dependency>
         </dependencies>
+
     </dependencyManagement>
     <modules>
         <module>com.hpe.sparrow.dal</module>
