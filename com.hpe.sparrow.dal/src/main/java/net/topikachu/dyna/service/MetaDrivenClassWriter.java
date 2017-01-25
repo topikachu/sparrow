@@ -7,7 +7,6 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 
 import static org.eclipse.persistence.internal.libraries.asm.Opcodes.*;
-import static org.eclipse.persistence.internal.libraries.asm.Opcodes.ARETURN;
 
 /**
  * Created by gongy on 2017/1/22.

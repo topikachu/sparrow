@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.hpe.sparrow</groupId>
-	<artifactId>dal</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <groupId>com.hpe.sparrow</groupId>
+    <artifactId>dal</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-	<name>dal</name>
-	<description>Demo project for Spring Boot</description>
+    <name>dal</name>
+    <description>Demo project for Spring Boot</description>
 
     <parent>
         <artifactId>parent</artifactId>
@@ -18,17 +18,16 @@
     </parent>
 
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
-	</properties>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
             <exclusions>
                 <exclusion>
                     <artifactId>hibernate-entitymanager</artifactId>
@@ -39,7 +38,7 @@
                     <groupId>org.hibernate</groupId>
                 </exclusion>
             </exclusions>
-		</dependency>
+        </dependency>
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>eclipselink</artifactId>
@@ -60,50 +59,50 @@
             <artifactId>javassist</artifactId>
             <version>3.21.0-GA</version>
         </dependency>
-		<!-- https://mvnrepository.com/artifact/org.eclipse.emf/org.eclipse.emf.ecore -->
-		<dependency>
-			<groupId>org.eclipse.emf</groupId>
-			<artifactId>org.eclipse.emf.ecore</artifactId>
-			<version>2.12.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.eclipse.emf/org.eclipse.emf.common -->
-		<dependency>
-			<groupId>org.eclipse.emf</groupId>
-			<artifactId>org.eclipse.emf.common</artifactId>
-			<version>2.12.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.eclipse.emf/org.eclipse.emf.ecore.xmi -->
-		<dependency>
-			<groupId>org.eclipse.emf</groupId>
-			<artifactId>org.eclipse.emf.ecore.xmi</artifactId>
-			<version>2.12.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.emfjson</groupId>
-			<artifactId>emfjson-jackson</artifactId>
-			<version>1.0.0-rc.1</version>
-		</dependency>
+        <!-- https://mvnrepository.com/artifact/org.eclipse.emf/org.eclipse.emf.ecore -->
+        <dependency>
+            <groupId>org.eclipse.emf</groupId>
+            <artifactId>org.eclipse.emf.ecore</artifactId>
+            <version>2.12.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.eclipse.emf/org.eclipse.emf.common -->
+        <dependency>
+            <groupId>org.eclipse.emf</groupId>
+            <artifactId>org.eclipse.emf.common</artifactId>
+            <version>2.12.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.eclipse.emf/org.eclipse.emf.ecore.xmi -->
+        <dependency>
+            <groupId>org.eclipse.emf</groupId>
+            <artifactId>org.eclipse.emf.ecore.xmi</artifactId>
+            <version>2.12.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.emfjson</groupId>
+            <artifactId>emfjson-jackson</artifactId>
+            <version>1.0.0-rc.1</version>
+        </dependency>
 
-		<dependency>
-			<groupId>com.hpe.sparrow</groupId>
-			<artifactId>ootb</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>com.hpe.sparrow</groupId>
+            <artifactId>ootb</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>

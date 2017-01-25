@@ -31,7 +31,7 @@ public class JpaConfig extends JpaBaseConfiguration {
     @Override
     protected Map<String, Object> getVendorProperties() {
         HashMap<String, Object> map = new HashMap<String, Object>();
-        map.put( PersistenceUnitProperties.WEAVING,"false");
+        map.put(PersistenceUnitProperties.WEAVING, "false");
         map.put(PersistenceUnitProperties.DDL_GENERATION, PersistenceUnitProperties.CREATE_OR_EXTEND);
         map.put(PersistenceUnitProperties.DDL_GENERATION_MODE, PersistenceUnitProperties.DDL_BOTH_GENERATION);
         //map.put(PersistenceUnitProperties.CREATE_JDBC_DDL_FILE, "create.sql");

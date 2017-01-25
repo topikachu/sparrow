@@ -9,16 +9,17 @@ import org.eclipse.persistence.internal.dynamic.DynamicPropertiesManager;
 public class Address extends DynamicEntityImpl {
     public static DynamicPropertiesManager DPM = new
             DynamicPropertiesManager();
+
     @Override
     public DynamicPropertiesManager fetchPropertiesManager() {
         return DPM;
     }
 
-    public String id(){
+    public String id() {
         return get("id");
     }
 
-    public String getStreet(){
+    public String getStreet() {
         return get("street");
     }
 

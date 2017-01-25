@@ -6,7 +6,7 @@ import com.hpe.sparrow.ootb.annotation.Entity;
  * Created by gongy on 2017/1/24.
  */
 @Entity
-public class Location extends BaseEntity{
+public class Location extends BaseEntity {
     private String city;
     private String address;
 

@@ -1,13 +1,9 @@
 package net.topikachu.dyna.service;
 
-import org.eclipse.persistence.dynamic.DynamicClassLoader;
 import org.eclipse.persistence.dynamic.DynamicEntity;
-import org.eclipse.persistence.dynamic.DynamicType;
 import org.eclipse.persistence.jpa.dynamic.JPADynamicHelper;
-import org.eclipse.persistence.jpa.dynamic.JPADynamicTypeBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,6 +18,7 @@ public class DynaService {
     private static final Logger log = LoggerFactory.getLogger(DynaService.class);
     @Autowired
     private Dyna2Pool dyna2Pool;
+
     @Transactional
     public void dyna() throws Exception {
         String classname = "net.topikachu.dyna.entity.dyna.Customer";

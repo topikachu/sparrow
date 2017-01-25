@@ -8,27 +8,30 @@ import org.eclipse.persistence.internal.dynamic.DynamicPropertiesManager;
  */
 public class Customer extends DynamicEntityImpl {
     public static DynamicPropertiesManager DPM = new
-             DynamicPropertiesManager();
+            DynamicPropertiesManager();
+
     @Override
     public DynamicPropertiesManager fetchPropertiesManager() {
         return DPM;
     }
 
-    public String id(){
+    public String id() {
         return get("id");
     }
 
-    public String getCusField1(){
+    public String getCusField1() {
         return get("cusField1");
     }
-    public String getFirstName(){
+
+    public String getFirstName() {
         return get("firstName");
     }
-    public String getLastName(){
+
+    public String getLastName() {
         return get("lastName");
     }
 
-    public Address getAddress(){
+    public Address getAddress() {
         return get("address");
     }
 }
